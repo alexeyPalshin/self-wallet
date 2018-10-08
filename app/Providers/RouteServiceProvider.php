@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
-use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\{
+    Route, View
+};
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider
@@ -24,7 +26,7 @@ class RouteServiceProvider extends ServiceProvider
     public function boot()
     {
         //
-
+        View::addExtension('html', 'php');
         parent::boot();
     }
 
